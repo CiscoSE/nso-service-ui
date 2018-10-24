@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoSE/nso-service-ui)
+
 **Network Services Orchestrator Web User Interface**
 
 This tool allows you to dynamically create and remove services from the web ui without coding. It syncs with the Network Services Orchestrator to dynamically generate the site.
@@ -65,22 +67,23 @@ If you change this file, you must restart the app
 ```
 
 **Container Installation**
+
 You need to specify the configuration folder called data in this way:
 
-docker run  --volume YOUR_PATH:/usr/src/app/web_ui/data -p YOUR_PORT:8025 sfloresk/nso-ui
+`docker run  --volume YOUR_PATH:/usr/src/app/web_ui/data -p YOUR_PORT:8025 sfloresk/nso-ui
+`
 
-The folder YOUR_PATH must have the config.json file in the format specified above
+The folder YOUR_PATH must have the config.json file in the format specified above.
 
 
 **Source Installation**
 
-As this is a Django application you will need to either integrate the application in your production environment or you can
+As this is a Django application, you will need to either integrate the application in your production environment or you can
 get it operational in a virtual environment on your computer/server. In the distribution is a requirements.txt file that you can
 use to get the package requirements that are needed. The requirements file is located in the root directory of the distribution.
 
 It might make sense for you to create a Python Virtual Environment before installing the requirements file. For information on utilizing
-a virtual environment please read http://docs.python-guide.org/en/latest/dev/virtualenvs/. Once you have a virtual environment active then
-install the packages in the requirements file.
+a virtual environment please read http://docs.python-guide.org/en/latest/dev/virtualenvs/. Once you have a virtual environment active, install the packages in the requirements file.
 
 `(virtualenv) % pip install -r requirements.txt
 `
@@ -92,5 +95,6 @@ To run the the application execute in the root directory of the distribution:
 
 **Known Issues**
 
-Works with services that have been defined using leafs, leaf-lists and lists
-The application's API token is hardcoded, it does not change in each login and there is not session timeout
+Works with services that have been defined using leafs, leaf-lists and lists.
+
+The application's API token is hardcoded, it does not change in each login and there is no session timeout.
